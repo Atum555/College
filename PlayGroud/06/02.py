@@ -1,0 +1,1 @@
+def nth_lowest(lnum:list[int], n:int): lnum.sort(); return lnum[n-1]

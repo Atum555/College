@@ -1,0 +1,1 @@
+def discard_middle(s:str) -> str: return (s[:2] + s[-2:]) * (len(s) > 3 ) + ""

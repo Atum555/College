@@ -1,0 +1,1 @@
+print(int(input()).__add__(int(input())))

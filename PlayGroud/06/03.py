@@ -1,0 +1,1 @@
+def rotate_list(l:list): return l[3:] + l[:3]
