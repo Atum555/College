@@ -1,0 +1,1 @@
+def sort_by_value(dic:dict): return sorted(dic.items(), key=lambda x:x[1])
