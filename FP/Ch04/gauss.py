@@ -1,3 +1,13 @@
+"""
+Code By: Cláudio Meireles
+
+Code on GitHub: https://github.com/Atum555/College/blob/main/FP/Ch04/gauss.py
+
+Minimum version tested: 3.10.12
+(Type hints used)
+"""
+
+
 from typing import TypeAlias
 
 Matrix: TypeAlias = list[list[int|float]]
@@ -53,19 +63,7 @@ def gauss(matrix:Matrix):
         """
         for col in range(len(matrix[0])): matrix[to_b][col] += matrix[from_a][col] * k
 
-    def multiply_row(matrix:Matrix, r:int, k:int|float) -> None:
-        """
-        Multiplies a row by a value k.
-
-        Args:
-        - matrix (Matrix): The matrix to modify.
-        - r (int): The index of the row to modify.
-        - k (int|float): The value to multiply the row for.
-        """
-        for col in range(len(matrix[0])):
-            matrix[r][col] *= k
-
-    
+   
     if not check_matrix(matrix): raise ValueError("Invalid Matrix.")
     
     # Transformar a submatrix dos coeficientes numa triangular superior,
@@ -98,10 +96,3 @@ def gauss(matrix:Matrix):
     except: raise ValueError
     
     return result
-
-
-
-print(gauss([[ 4, 8, 0, 0, 8],
-             [-5, 4, 2, 5, 6],
-             [-1,-6, 1,-6,-5],
-             [-1,-6, 1,-6,-5]]))
