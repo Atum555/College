@@ -1,5 +1,3 @@
-from functools import cache
-@cache
 def fib(n:int):
     """
     Returns the nth number in the Fibonacci sequence.
@@ -10,10 +8,7 @@ def fib(n:int):
     Returns:
     int: The nth number in the Fibonacci sequence.
     """
-    if n == 0: return 0
-    if n == 1: return 1
-    if n == 2: return 1
-    return fib(n-1) + fib(n-2)
+    return int(((1+5**0.5)**n-(1-5**0.5)**n)/((2**n)*(5**0.5)))
         
 
 def caesar(message:str):
@@ -28,7 +23,6 @@ def caesar(message:str):
     """
     new_message = ""
     for i, x in enumerate(message):
-        if x.isalpha():
-            new_message += chr((ord(x) - ord("A") - fib(i)) % 26 + ord("A"))
+        if x.isalpha(): new_message += chr((ord(x) - ord("A") - fib(i)) % 26 + ord("A"))
         else: new_message += x
     return new_message

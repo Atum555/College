@@ -1,0 +1,1 @@
+print(round(float(input())/100*float(input())*float(input()),2))
