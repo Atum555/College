@@ -1,4 +1,4 @@
-def permutations(string:str)-> list:
+def permutations(string:str) -> list:
     if len(string) <2 : return [string]
 
     result = []
