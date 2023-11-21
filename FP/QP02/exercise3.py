@@ -1,8 +1,6 @@
-num = int(input())
-rev_num = 0
-while True:
-    rev_num *= 10
-    rev_num += num % 10
-    num //= 10
-    if num <= 0: break
-print(rev_num)
+a = int(input())
+b = int(input())
+c = int(input())
+
+print((a*3-5)+((b+6)//4))
+print(((b+6)//4)-(c**2))
