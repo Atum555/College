@@ -1,0 +1,1 @@
+def rearrange(l:list) -> list: return list(x for x in l if x <= 0) + list(x for x in l if x > 0)
