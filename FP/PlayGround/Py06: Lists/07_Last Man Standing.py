@@ -1,4 +1,4 @@
-def last_man_standing(list:list[str|int|float], step:int) -> str|int|float:
+def last_man_standing(list:list, step:int):
     to_remove = -1
     while len(list) > 1: 
         to_remove = (to_remove + step) % len(list)
