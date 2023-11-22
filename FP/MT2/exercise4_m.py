@@ -14,8 +14,10 @@ def add(n1:str, n2:str) -> str:
     if carry > 0: result = str(carry) + result
     if result[0] == "0": 
         for i in range(len(result)):
-            if result[i] != "0": result = result[i-1:]; break
+            if result[i] != "0": result = result[i:]; break
     if result[-1] == "0":
-        for i in range(-1,-len(result),-1):
+        for i in range(-1,-len(result)-1,-1):
             if result[i] != "0": result = result[:i+1]; break
+    if result[0] == ".": result = "0" + result
+    if result[-1] == ".": result += "0"
     return result
