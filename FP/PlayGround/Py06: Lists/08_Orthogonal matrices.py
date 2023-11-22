@@ -1,4 +1,4 @@
-def is_orthogonal(mx:list[list[int]]) -> bool:
+def is_orthogonal(mx:list) -> bool:
     mxT = [[0 for _ in mx] for _ in mx[0]]
     result = [[0 for _ in mx] for _ in mx]
     for i in range(len(mx)):

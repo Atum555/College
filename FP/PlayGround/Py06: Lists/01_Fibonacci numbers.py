@@ -1,4 +1,4 @@
-def fib(b:int) -> list[int]:
+def fib(b:int) -> list:
     result = []
     while len(result)<b:
         if len(result) == 0: result.append(0)

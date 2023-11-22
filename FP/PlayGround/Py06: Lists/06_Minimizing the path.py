@@ -1,4 +1,4 @@
-def min_path(path:list[str]) -> list[str]:
+def min_path(path:list) -> list:
 
     def mapValue(move:str) -> int:
         if move == "UP": return 1

@@ -1,4 +1,4 @@
-def pattern_hunting(l1:list[str], l2:list[str], p:str) -> list[str]:
+def pattern_hunting(l1:list, l2:list, p:str) -> list:
     result:list[str] = []
     for i in range(len(l1)):
         if p in l1[i]: result.append(l2[i])

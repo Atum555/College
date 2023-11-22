@@ -1,1 +1,1 @@
-def count_chars(text:str) -> tuple[int]: return (sum([x.isalpha() for x in text]), sum([x.isnumeric() for x in text]), sum([not (x.isalpha() or x.isnumeric()) for x in text]))
+def count_chars(text:str) -> tuple: return (sum([x.isalpha() for x in text]), sum([x.isnumeric() for x in text]), sum([not (x.isalpha() or x.isnumeric()) for x in text]))
