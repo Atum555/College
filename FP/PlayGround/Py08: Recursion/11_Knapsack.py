@@ -1,7 +1,7 @@
 def knapsack(money:int, products:dict, wishlist:dict, sub:bool = False):
     results = []
     for product in wishlist:
-        tempMoney, tempWishlist = (money, wishlist.copy())
+        tempMoney, tempWishlist = money, wishlist.copy()
 
         tempMoney -= products[product]
         if tempMoney < 0: continue
