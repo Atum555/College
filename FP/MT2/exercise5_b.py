@@ -1,0 +1,1 @@
+def sequences_of(alphabet:str, n:int) -> list: return [""] if len(alphabet) == 0 else [x for x in alphabet] if n < 2 else [l + subComb for l in alphabet for subComb in sequences_of(alphabet, n-1)]

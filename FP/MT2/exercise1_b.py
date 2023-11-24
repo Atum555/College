@@ -1,0 +1,1 @@
+def rgb_to_black(r:int,g:int,b:int) -> int: return None if r < 0 or r > 255 or g < 0 or g > 255 or b < 0 or b > 255 else round(1 - max([r/255, g/255, b/255]), 3)
