@@ -1,0 +1,2 @@
+import math
+def comprehensions(i:int, j:int):  return list(filter(lambda x: x % 10 == 3 or x % 10 == 8, range(i,j+1))), tuple(map(lambda x: round(math.sqrt(x), 2), range(i,j+1))), dict(map(lambda x: (x, chr(x)), range(i,j+1)))

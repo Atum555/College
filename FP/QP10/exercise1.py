@@ -1,0 +1,1 @@
+def square_odds(values:str): return ",".join(map(str, map(lambda x: int(x)**2, filter(lambda x: int(x) % 2 == 1, values.split(",")))))
