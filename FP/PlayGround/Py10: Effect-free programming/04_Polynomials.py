@@ -1,0 +1,1 @@
+def evaluate(a:list, x:int): return sum([a*x**i for i,a in enumerate(a)])

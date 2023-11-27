@@ -1,0 +1,1 @@
+def get_composites(n:int): return (x for x in range(4,n+1) if not all(x % y != 0 for y in range(2,x)))
