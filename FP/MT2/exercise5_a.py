@@ -1,0 +1,1 @@
+def subsequences(string:str): return [""] if len(string) == 0 else [recsol := subsequences(string[1:])] + [string[0] + other for other in recsol]
