@@ -1,0 +1,1 @@
+def rgb_to_grayscale(r, g, b): return round(0.299*(r/255) + 0.587*(g/255) + 0.114*(b/255), 3) if 0<=r<=255 and 0<=g<=255 and 0<=b<=255 else None

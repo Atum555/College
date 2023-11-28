@@ -1,0 +1,1 @@
+def check_latin(matrix): return False if len(symbols := set(matrix[0])) != (n := len(matrix)) or any(set(row) != symbols for row in matrix[1:]) or any(set(matrix[i][j] for i in range(n)) != symbols for j in range(n)) else True

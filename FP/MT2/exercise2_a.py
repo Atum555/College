@@ -1,0 +1,1 @@
+def find_character_indexes(astring, achar): return [i for i,c in enumerate(astring) if c == achar]
