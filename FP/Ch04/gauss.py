@@ -48,7 +48,7 @@ def gauss(matrix:Matrix):
         - b (int): The index of the second row to switch.
         """
         temp = matrix[a]
-        matrix[a] = matrix[b]
+        matrix[b] = matrix[a]
         matrix[b] = temp
 
     def add_rows(matrix:Matrix, from_a:int, to_b:int, k:int|float) -> None:
