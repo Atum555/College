@@ -1,5 +1,5 @@
 # One-liner
-def union_with(combine, dict1:dict, dict2:dict): return {**{dict1: combine(dict1[x], dict2[x]) for x in dict1 if dict2.get(x) != None}, **{x: dict1[x] for x in dict1 if x not in dict2}, **{x:dict2[x] for x in dict2 if x not in dict1}}
+def union_with(combine, dict1:dict, dict2:dict): return {**{x: combine(dict1[x], dict2[x]) for x in dict1 if dict2.get(x) != None}, **{x: dict1[x] for x in dict1 if x not in dict2}, **{x:dict2[x] for x in dict2 if x not in dict1}}
 
 # Normal
 def union_with(combine, dict1:dict, dict2:dict):
@@ -10,7 +10,7 @@ def union_with(combine, dict1:dict, dict2:dict):
             result = combine(value1, value2)
             return result
         elif key in dict1:
-            return dict1[dict2]
+            return dict1[key]
         elif key in dict2:
             return dict2[key]
         
