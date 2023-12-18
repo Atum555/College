@@ -1,0 +1,1 @@
+def number_of_collisions(objects: list) -> int: return sum([int(not (objects[i]["x2"] < objects[j]["x1"] or objects[i]["x1"] > objects[j]["x2"] or objects[i]["y2"] < objects[j]["y1"] or objects[i]["y1"] > objects[j]["y2"])) for i in range(len(objects)) for j in range(i+1, len(objects))])
