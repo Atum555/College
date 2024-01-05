@@ -34,3 +34,10 @@ def memorize(func):
 @memorize
 def fibonacci(n:int): 
     return 1 if n < 2 else fibonacci(n-1) + fibonacci(n-2)
+
+
+def infinite_sequence():
+    num = 0
+    while True:
+        yield num
+        num += 1
