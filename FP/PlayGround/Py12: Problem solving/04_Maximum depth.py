@@ -1,0 +1,1 @@
+def maximum_depth(l): return max((*map(lambda x: maximum_depth(x)+1, l), 1))
