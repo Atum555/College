@@ -41,3 +41,12 @@ def infinite_sequence():
     while True:
         yield num
         num += 1
+
+
+def gcd_Euclid(a:int, b:int):
+    assert isinstance(a, int)
+    assert isinstance(b, int)
+    if b == 0:
+        return a
+
+    return gcd_Euclid(b, a%b)
