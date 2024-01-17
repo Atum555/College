@@ -1,3 +1,12 @@
+#	
+#
+#	CODE BY: CLAUDIO MEIRELES
+#
+#	CODE ON GITHUB: https://github.com/Atum555/College/blob/main/FSC/Mini%20Projeto%202/projeto.asm
+#
+#	
+
+
 .data
 inStr: .space 4
 questionStr: .asciz "Input number: "
