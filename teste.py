@@ -50,3 +50,8 @@ def gcd_Euclid(a:int, b:int):
         return a
 
     return gcd_Euclid(b, a%b)
+
+
+def atum(a:int, b:int):
+    assert a < b
+    return (b - a)*5
