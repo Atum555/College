@@ -1,9 +1,0 @@
-{
-    "python.analysis.typeCheckingMode": "basic",
-    "files.associations": {
-        "climits": "cpp",
-        "limits.h": "c",
-        "iostream": "cpp",
-        "cmath": "cpp"
-    }
-}
