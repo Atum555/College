@@ -1,0 +1,64 @@
+---
+Language: Cpp
+IndentWidth: 4
+ColumnLimit: 80
+TabWidth: 4
+UseTab: Never
+AlignAfterOpenBracket: BlockIndent
+AlignArrayOfStructures: Right
+AlignConsecutiveBitFields: AcrossComments
+AlignConsecutiveMacros: AcrossComments
+AlignConsecutiveAssignments:
+    Enabled: true
+    AcrossEmptyLines: false
+    AcrossComments: true
+    AlignCompound: true
+    PadOperators: true
+AlignConsecutiveDeclarations:
+    Enabled: true
+    AcrossEmptyLines: false
+    AcrossComments: true
+    AlignFunctionPointers: false
+AlignConsecutiveShortCaseStatements:
+    Enabled: true
+    AcrossEmptyLines: false
+    AcrossComments: true
+    AlignCaseColons: true
+AlignEscapedNewlines: Left
+AlignOperands: Align
+AlignTrailingComments:
+    Kind: Always
+    OverEmptyLines: 2
+AllowShortBlocksOnASingleLine: Always
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortCompoundRequirementOnASingleLine: true
+AllowShortEnumsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: All
+AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+AllowShortLambdasOnASingleLine: All
+AllowShortLoopsOnASingleLine: true
+BinPackArguments: true
+BinPackParameters: true
+BreakBeforeBraces: Attach
+BreakBeforeBinaryOperators: All
+BreakBeforeTernaryOperators: true
+BracedInitializerIndentWidth: 4
+Cpp11BracedListStyle: false
+IndentCaseBlocks: false
+IndentCaseLabels: false
+IndentExternBlock: Indent
+IndentGotoLabels: true
+InsertBraces: false
+KeepEmptyLinesAtEOF: false
+KeepEmptyLinesAtTheStartOfBlocks: false
+LineEnding: LF
+MaxEmptyLinesToKeep: 2
+ReferenceAlignment: Right
+SeparateDefinitionBlocks: Always
+SpaceBeforeParens: ControlStatements
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeSquareBrackets: false
+SpacesInParens: Never
+SpacesInSquareBrackets: false
+---
+
