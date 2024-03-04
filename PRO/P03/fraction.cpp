@@ -38,10 +38,3 @@ fraction operator*(fraction a, fraction b) {
 fraction add(fraction a, fraction b) { return a + b; }
 
 fraction mul(fraction a, fraction b) { return a * b; }
-
-int main() {
-    fraction a = { 3, 4 };
-    fraction b = { 4, 2 };
-    fraction c = a + b;
-    return 0;
-}
