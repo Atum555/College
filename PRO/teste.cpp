@@ -1,18 +1,19 @@
+#include <cstring>
 #include <iostream>
 #include <string>
 
-struct atum {
-    int   size;
-    short height;
-    short weight;
-};
-
-double sumWeights(const atum &a, const atum &b) { return a.weight + b.weight; }
+/* void operator+=(char *dst, const char src[]) {
+    int i = std::strlen(dst);
+    int j = 0;
+    while (src[j] != '\0') {
+        dst[i] = src[j];
+        i++;
+        j++;
+    }
+    dst[i] = '\0';
+} */
 
 int main() {
-    atum myTuna   = { 12, 30, 5 };
-    atum yourTuna = { 6, 20, 4 };
-    std::cout << sumWeights(myTuna, yourTuna) << std::endl
-              << sizeof(atum) << std::endl;
+    std::cout << "ola" << std::endl;
     return 0;
 }
