@@ -4,7 +4,7 @@ int nrl(const char s[], char low[]) {
     //
     // Conversao:
     // 0b00...00.0000.0000.0000.0000.0000.0000.0000
-    //             zyx.wvu.tsrq.ponm.lkji.hgfe.dcba
+    //             zy.xwvu.tsrq.ponm.lkji.hgfe.dcba
     //
     // When a letter is found it's representation is added to unique.
     // If it is already in found it is then removed from unique
