@@ -28,7 +28,7 @@ int nrl(const char s[], char low[]) {
     int c = 0;
     for (int i = 0; i < 26; ++i) {
         if (unique & 1) {               // For each bit, if 1
-            low[c] = 'a' + i;           // Add corresponding letter to result string
+            low[c] = 'a' + i;           // Add corresponding letter to result str
             ++c;                        // Increment letter counter
         }
         unique >>= 1;                   // Shift letter representation
