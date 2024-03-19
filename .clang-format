@@ -39,10 +39,12 @@ AllowShortLambdasOnASingleLine: All
 AllowShortLoopsOnASingleLine: true
 BinPackArguments: true
 BinPackParameters: true
+BracedInitializerIndentWidth: 4
 BreakBeforeBraces: Attach
 BreakBeforeBinaryOperators: All
+BreakBeforeConceptDeclarations: Always
 BreakBeforeTernaryOperators: true
-BracedInitializerIndentWidth: 4
+BreakTemplateDeclarations: Yes
 Cpp11BracedListStyle: false
 IndentCaseBlocks: false
 IndentCaseLabels: false
@@ -55,6 +57,7 @@ LineEnding: LF
 MaxEmptyLinesToKeep: 2
 ReferenceAlignment: Right
 SeparateDefinitionBlocks: Always
+SpaceAfterTemplateKeyword: true
 SpaceBeforeParens: ControlStatements
 SpaceBeforeRangeBasedForLoopColon: true
 SpaceBeforeSquareBrackets: false
