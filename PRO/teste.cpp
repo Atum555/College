@@ -1,10 +1,9 @@
 #include <algorithm>
-#include <cstring>
 #include <iostream>
 #include <string>
 #include <unistd.h>
 
-void loadText(const char *str) {
+void slowPrint(const char *str) {
     char letters[]
         = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     int i = 0;
@@ -34,7 +33,6 @@ void loadText(const char *str) {
 }
 
 int main() {
-    loadText("A minha pila é muito grande!");
-    std::string atum = "432";
+    ;
     return 0;
 }
