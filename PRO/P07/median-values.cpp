@@ -61,11 +61,3 @@ void calc_medians(const string &input_fname, const string &output_fname) {
              << endl;
     }
 }
-
-int main() {
-    {
-        calc_medians("p5_test1.txt", "p5_test1_out.txt");
-        show_file("p5_test1_out.txt");
-    }
-    return 0;
-}
