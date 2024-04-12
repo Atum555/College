@@ -34,5 +34,6 @@ void slowPrint(const char *str) {
 
 int main() {
     ;
+    ;
     return 0;
 }
