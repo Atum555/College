@@ -3,6 +3,8 @@
 #include <string>
 #include <unistd.h>
 
+using namespace std;
+
 void slowPrint(const char *str) {
     char letters[]
         = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
