@@ -43,6 +43,7 @@ BracedInitializerIndentWidth: 4
 BreakBeforeBraces: Attach
 BreakBeforeBinaryOperators: All
 BreakBeforeConceptDeclarations: Always
+BreakBeforeInlineASMColon: Always
 BreakBeforeTernaryOperators: true
 BreakTemplateDeclarations: Yes
 Cpp11BracedListStyle: false
