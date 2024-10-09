@@ -1,2 +1,5 @@
 .vscode
 
+# C files
+*.[ao]
+*.so
