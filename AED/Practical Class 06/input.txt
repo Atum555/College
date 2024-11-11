@@ -1,0 +1,9 @@
+2
+3 8
+6
+Liam 1 5
+Olivia 3 2
+Noah 4 1
+Amelia 20 1
+Emma 50 4
+Oliver 72 3
