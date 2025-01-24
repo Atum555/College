@@ -1,0 +1,20 @@
+-- For each district, list the name of the district, the party designation and the number of votes of the party that had the higher number of votes. Order ascendantly by the name of the district.
+
+WITH VOTES_PER_PARTY_PER_DISTRICT AS (
+    SELECT D.NAME, V.PARTY, SUM(V.VOTES) AS VOTES
+    FROM DISTRICTS D
+    JOIN MUNICIPALITIES M ON M.DISTRICT = D.CODE
+    JOIN PARISHES P ON P.MUNICIPALITY = M.CODE
+    JOIN VOTINGS V ON V.PARISH = P.CODE
+    GROUP BY D.CODE, V.PARTY
+    ORDER BY D.NAME, V.PARTY
+)
+
+SELECT V.NAME, P.DESIGNATION, V.VOTES
+FROM VOTES_PER_PARTY_PER_DISTRICT V
+JOIN PARTIES P ON P.ACRONYM = V.PARTY
+WHERE V.VOTES = (
+    SELECT MAX(VOTES)
+    FROM VOTES_PER_PARTY_PER_DISTRICT
+    WHERE NAME = V.NAME
+);
