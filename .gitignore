@@ -3,3 +3,12 @@
 # C files
 *.[ao]
 *.so
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+*.cmake
+
+# DA test lib
+**/lib/googletest/
+**/DA/**/Makefile
