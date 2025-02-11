@@ -108,16 +108,18 @@ template <class T>
 class Graph {
   public:
     ~Graph();
+
     /*
      * Auxiliary function to find a vertex with a given the content.
      */
     Vertex<T> *findVertex(const T &in) const;
+
     /*
      *  Adds a vertex with a given content or info (in) to a graph (this).
      *  Returns true if successful, and false if a vertex with that content already exists.
      */
-    bool       addVertex(const T &in);
-    bool       removeVertex(const T &in);
+    bool addVertex(const T &in);
+    bool removeVertex(const T &in);
 
     /*
      * Adds an edge to a graph (this), given the contents of the source and
