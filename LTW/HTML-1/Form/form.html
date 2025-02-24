@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form</title>
+    </head>
+    <body>
+        <form action="#">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required />
+            </div>
+
+            <fieldset>
+                <legend>Age</legend>
+
+                <div>
+                    <input type="radio" name="age" id="age0" value="18" />
+                    <label for="age0">&lt;18</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="age" id="age1" value="19-35" />
+                    <label for="age1">19-35</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="age" id="age2" value="36-48" />
+                    <label for="age2">36-48</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="age" id="age3" value="49" />
+                    <label for="age3">&gt;49</label>
+                </div>
+            </fieldset>
+
+            <div>
+                <label for="profession">Profession:</label>
+                <input type="text" name="profession" id="profession" list="professions" />
+                <datalist id="professions">
+                    <option value="Teacher"></option>
+                    <option value="Fireman"></option>
+                    <option value="Scientist"></option>
+                </datalist>
+            </div>
+
+            <div>
+                <label for="country">Country:</label>
+                <select name="country" id="country" required>
+                    <option value="">Select a country</option>
+                    <option value="portugal">Portugal</option>
+                    <option value="spain">Spain</option>
+                    <option value="usa">United States of America</option>
+                    <option value="germany">Germany</option>
+                </select>
+            </div>
+
+            <fieldset>
+                <legend>Interests</legend>
+
+                <div>
+                    <input type="checkbox" name="interests" id="interest1" value="sports" />
+                    <label for="interest1">Sports</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="interests" id="interest2" value="music" />
+                    <label for="interest2">Music</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="interests" id="interest3" value="movies" />
+                    <label for="interest3">Movies</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="interests" id="interest4" value="tv" />
+                    <label for="interest4">TV</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="interests" id="interest5" value="travel" />
+                    <label for="interest5">Travel</label>
+                </div>
+            </fieldset>
+
+            <div>
+                <label for="referer">Where did you hear about us?</label>
+                <textarea name="referer" id="referer"></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
