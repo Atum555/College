@@ -1,0 +1,86 @@
+@startuml diagrama_de_classes
+
+title Diagrama de Classes - SiGIE
+
+class Sala {
+  - id: int
+  - nome: String
+}
+
+class Setor {
+  - id: int
+  - nome: String
+}
+
+class Lugar {
+  - número: int
+}
+
+class Espetáculo {
+  - id: int
+  - nome: String
+  - descricao: String
+  - data: Date
+  - hora: Time
+  - duração: int
+  - dataHoraLimiteReserva: DateTime
+}
+
+note left of Espetáculo
+  dataHoraLimiteReserva deve ser
+  anterior ao início do espetáculo
+end note
+
+class Artista {
+  - id: int
+  - nome: String
+  - nacionalidade: String
+  - biografia: String
+}
+
+class Cliente {
+  - id: int
+  - nome: String
+  - nacionalidade: String
+  - morada: String
+  - email: String
+}
+
+class Reserva {
+  - numeroReserva: int
+  - dataHoraLimiteAquisicao: DateTime
+  - numLugares: int
+  - precoTotal: float
+}
+
+class Bilhete {
+  - id: int
+  - dataHora: DateTime
+  - numBilhetes: int
+  - precoTotal: float
+}
+
+class PreçoSetor {
+  - id: int
+  - preco: float
+}
+
+Sala "1" -- "1..*" Setor : "contém"
+Setor "1" -- "1..*" Lugar : "possui"
+
+Espetáculo "1" -- "1..*" PreçoSetor : "define preço"
+PreçoSetor "*" -- "1" Setor : "referente"
+
+Espetáculo "1" -- "1" Sala : "ocorre em"
+Artista "1..*" -- "0..*" Espetáculo : "participa em"
+
+Cliente "1" -- "0..*" Reserva : "realiza"
+Reserva "1" -- "1" Espetáculo : "para"
+Reserva "1" -- "1" Setor : "no sector"
+
+Bilhete "0..1" -- "1" Reserva : "usa"
+Bilhete "1" -- "1" Espetáculo : "para"
+Bilhete "1" -- "1" Setor : "no sector"
+Cliente "1" -- "0..*" Bilhete : "compra"
+
+@enduml
