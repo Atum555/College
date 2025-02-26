@@ -1,0 +1,32 @@
+@startuml diagrama_de_uso
+
+title Diagrama de Utilização - SiGIE
+left to right direction
+
+actor "Responsável pelas Instalações" as RespInst
+actor "Responsável pela Programação Cultural" as RespProg
+actor "Público" as Publico
+actor "Cliente" as Cliente
+actor "Empregado de Caixa" as Empregado
+
+rectangle "SiGIE" {
+    usecase "Registar Salas e Lugares" as UC1
+    usecase "Registar Programação Cultural" as UC2
+    usecase "Registar Informação sobre Artistas" as UC3
+    usecase "Consultar Programação Cultural" as UC4
+    usecase "Registar Cliente" as UC5
+    usecase "Reservar Bilhetes" as UC6
+    usecase "Vender Bilhetes" as UC7
+    usecase "Consultar Estatísticas" as UC8
+}
+
+RespInst --> UC1
+RespProg --> UC2
+RespProg --> UC3
+Publico --> UC4
+Publico --> UC5
+Cliente --> UC6
+Empregado --> UC7
+RespProg --> UC8
+
+@enduml

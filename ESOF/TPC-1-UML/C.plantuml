@@ -1,0 +1,25 @@
+@startuml diagrama_de_estados
+
+title Diagrama de Estados - Espetáculo - SiGIE
+
+[*] --> Programado
+
+Programado --> ReservasAbertas : Início do período de reservas
+
+ReservasAbertas --> VendaDireta : Venda sem reserva
+VendaDireta --> VendaConfirmada : Pagamento efetuado
+
+ReservasAbertas --> ReservaEfetuada : Cliente reserva bilhetes
+ReservaEfetuada --> ReservaExpirada : Prazo expira
+ReservaEfetuada --> VendaConfirmada : Pagamento efetuado
+
+VendaConfirmada --> Realizado : Após realização do espetáculo
+
+Programado --> Cancelado : Cancelamento pelo responsável
+ReservasAbertas --> Cancelado : Cancelamento pelo responsável
+VendaConfirmada --> Cancelado : Cancelamento
+
+Realizado --> [*]
+Cancelado --> [*]
+
+@enduml
