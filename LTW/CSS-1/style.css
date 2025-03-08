@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Imperial+Script&family=Ruda:wght@400..900&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Crimson Pro", serif;
+    color: #333;
+}
+
+h1 {
+    margin: 20px 0 0;
+    font-family: "Imperial Script", cursive;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 8em;
+    text-align: center;
+}
+
+dl.summary {
+    border-color: #e38a85;
+    border-style: dashed solid dashed dashed;
+    border-width: 2px 5px 2px 2px;
+    border-radius: 0.7em 0 0 0.7em;
+    padding: 0.7em 0 0 1em;
+    font-weight: 500;
+    background-color: #eeccc4;
+}
+
+dl.summary dt {
+    font-variant-caps: petite-caps;
+    text-transform: capitalize;
+}
+
+dl.summary dd {
+    margin: 0 0 0.7em;
+}
+
+article.recipe {
+    margin: 0 auto;
+    padding: 1.5em;
+    width: 600px;
+    max-width: 80vw;
+    background-color: #f5ede3;
+}
+
+article.recipe img {
+    width: 100%;
+}
+
+article.recipe h2 {
+    margin: 0.5em 0 0.5em;
+    border-bottom: 2px solid #333;
+    font-family: "Ruda", sans-serif;
+    font-weight: 300;
+    font-size: 2em;
+    text-align: right;
+}
+
+article.recipe p {
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+article.recipe em {
+    font-style: normal;
+    font-weight: bold;
+    color: #8aa49d;
+}
+
+article.recipe section.lists p {
+    margin: 0;
+    font-weight: bold;
+}
+
+article.recipe section.lists ul,
+article.recipe section.lists ol {
+    margin: 0;
+    padding: 0 0 0 1.2em;
+}
+
+article.recipe section.lists li {
+    margin: 1em 0 1em;
+}
