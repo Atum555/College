@@ -5,8 +5,7 @@ void advance(int delta, int &d, int &m, int &y) {
     while (doit) {
         switch (m) {
         case 2: {
-            int maxD
-                = y % 4 == 0 ? (y % 100 ? (y % 400 ? 29 : 28) : (29)) : (28);
+            int maxD = y % 4 == 0 ? (y % 100 ? (y % 400 ? 29 : 28) : (29)) : (28);
             if (d > maxD) {
                 d -= maxD;
                 ++m;

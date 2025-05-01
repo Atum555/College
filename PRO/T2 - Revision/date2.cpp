@@ -4,7 +4,9 @@
 
 using namespace std;
 
-bool isLeapYear(unsigned long year) { return ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)); }
+bool isLeapYear(unsigned long year) {
+    return ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0));
+}
 
 bool isValidDate(int year, int month, int day) {
     if (1 > year or year > 9999) return false;

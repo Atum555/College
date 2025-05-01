@@ -6,8 +6,7 @@
 
 class Circle : public Shape {
   public:
-    Circle(const point &center, double radius)
-        : Shape(center), radius_(radius) {}
+    Circle(const point &center, double radius) : Shape(center), radius_(radius) {}
 
     double area() const override final { return M_PI * radius_ * radius_; }
 

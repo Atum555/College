@@ -13,8 +13,7 @@ void trim(char s[]) {
             ++spaceCounter;
         } else {
             start = false;
-            for (int j = 0; j < spaceCounter; j++)
-                s[i - offSet - spaceCounter + j] = ' ';
+            for (int j = 0; j < spaceCounter; j++) s[i - offSet - spaceCounter + j] = ' ';
             s[i - offSet] = s[i];
             spaceCounter  = 0;
         }

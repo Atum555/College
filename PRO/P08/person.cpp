@@ -3,10 +3,7 @@
 #include <fstream>
 #include <vector>
 
-Person::Person(
-    const std::string &name, const std::string &address,
-    const std::string &phone
-)
+Person::Person(const std::string &name, const std::string &address, const std::string &phone)
     : name_(name), address_(address), phone_(phone) {}
 
 std::string Person::get_name() const { return name_; }
@@ -15,9 +12,7 @@ std::string Person::get_address() const { return address_; }
 
 std::string Person::get_phone() const { return phone_; }
 
-void read_persons_data(
-    const std::string &file_name, std::vector<Person> &persons
-) {
+void read_persons_data(const std::string &file_name, std::vector<Person> &persons) {
     std::ifstream inf(file_name);
     std::string   name;
     while (std::getline(inf, name)) {

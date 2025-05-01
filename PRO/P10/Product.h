@@ -3,7 +3,7 @@
 
 class Product {
   public:
-    Product(int id, float price) : id_(id), price_(price){};
+    Product(int id, float price) : id_(id), price_(price) {};
 
     int get_id() const { return id_; }
 

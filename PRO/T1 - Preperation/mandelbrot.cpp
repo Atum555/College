@@ -1,8 +1,7 @@
 #include "complex.h"
 
 complex operator*(const complex a, const complex b) {
-    return complex{ a.real * b.real - a.img * b.img,
-                    a.real * b.img + a.img * b.real };
+    return complex{ a.real * b.real - a.img * b.img, a.real * b.img + a.img * b.real };
 }
 
 complex operator+(const complex a, const complex b) {

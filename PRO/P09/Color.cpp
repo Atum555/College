@@ -18,8 +18,7 @@ unsigned char Color::green() const { return green_; }
 unsigned char Color::blue() const { return blue_; }
 
 bool Color::equal_to(const Color &other) const {
-    return other.red_ == red_ and other.green_ == green_
-           and other.blue_ == blue_;
+    return other.red_ == red_ and other.green_ == green_ and other.blue_ == blue_;
 }
 
 void Color::invert() {

@@ -12,7 +12,9 @@ bool operator>(const sm_entry &a, const sm_entry &b) { return not(a < b) and not
 
 bool operator==(const sm_entry &a, int b) { return a.value == b; }
 
-sm_entry operator+(const sm_entry &a, const sm_entry &b) { return sm_entry{ a.row, a.col, a.value + b.value }; }
+sm_entry operator+(const sm_entry &a, const sm_entry &b) {
+    return sm_entry{ a.row, a.col, a.value + b.value };
+}
 
 void sum(const smatrix &a, const smatrix &b, smatrix &r) {
     r.clear();

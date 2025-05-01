@@ -8,18 +8,19 @@
 
 using namespace std;
 
-template <class T> class Line {
+template <class T>
+class Line {
   public:
     string    name;
     vector<T> v;
     T         median = 0;
 };
 
-template <class T> void median(Line<T> &line) {
+template <class T>
+void median(Line<T> &line) {
     sort(line.v.begin(), line.v.end());
-    size_t s = line.v.size();
-    line.median
-        = s % 2 ? line.v[s / 2] : 0.5 * (line.v[s / 2 - 1] + line.v[s / 2]);
+    size_t s    = line.v.size();
+    line.median = s % 2 ? line.v[s / 2] : 0.5 * (line.v[s / 2 - 1] + line.v[s / 2]);
 }
 
 void calc_medians(const string &input_fname, const string &output_fname) {
@@ -58,7 +59,6 @@ void calc_medians(const string &input_fname, const string &output_fname) {
 
         // Calcular a média
         median(line);
-        outf << line.name << " " << fixed << setprecision(1) << line.median
-             << endl;
+        outf << line.name << " " << fixed << setprecision(1) << line.median << endl;
     }
 }

@@ -21,9 +21,7 @@ bool Polygon::get_vertex(unsigned long i, Point &p) const {
 
 double Polygon::perimeter() const {
     double p = 0;
-    for (size_t i = 0; i < points_.size() - 1; ++i) {
-        p += distance(points_[i], points_[i + 1]);
-    }
+    for (size_t i = 0; i < points_.size() - 1; ++i) { p += distance(points_[i], points_[i + 1]); }
     p += distance(points_[0], points_[points_.size() - 1]);
     return p;
 }

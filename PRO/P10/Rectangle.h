@@ -14,10 +14,8 @@ class Rectangle : public Shape {
     double perimeter() const override final { return 2 * width_ + 2 * height_; }
 
     bool contains(const point &p) const override final {
-        bool x = get_center().x - width_ / 2 <= p.x
-                 and p.x <= get_center().x + width_ / 2;
-        bool y = get_center().y - height_ / 2 <= p.y
-                 and p.y <= get_center().y + height_ / 2;
+        bool x = get_center().x - width_ / 2 <= p.x and p.x <= get_center().x + width_ / 2;
+        bool y = get_center().y - height_ / 2 <= p.y and p.y <= get_center().y + height_ / 2;
 
         return x and y;
     }

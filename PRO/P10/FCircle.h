@@ -10,8 +10,7 @@ class FCircle : public Figure {
         : Figure(x_center, y_center), radius_(radius) {}
 
     void draw() const override final {
-        std::cout << "C(" << x_center_ << "," << y_center_ << ")(" << radius_
-                  << ")";
+        std::cout << "C(" << x_center_ << "," << y_center_ << ")(" << radius_ << ")";
     }
 
   private:

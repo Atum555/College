@@ -22,9 +22,7 @@ bool interval_Contains(const interval &a, const time_of_day &b) {
     return a.start <= b && b < a.end;
 }
 
-int countMinutes(const interval &a) {
-    return a.end.h * 60 + a.end.m - a.start.h * 60 - a.start.m;
-}
+int countMinutes(const interval &a) { return a.end.h * 60 + a.end.m - a.start.h * 60 - a.start.m; }
 
 int search_intervals(time_of_day t, const interval a[], int n, interval &u) {
     u = { t, t };

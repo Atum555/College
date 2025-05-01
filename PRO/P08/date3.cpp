@@ -25,9 +25,7 @@ bool validDate(int year, int month, int day) {
     }
 }
 
-void numberToString(
-    const unsigned long n, std::string &str, const unsigned long int size
-) {
+void numberToString(const unsigned long n, std::string &str, const unsigned long int size) {
     std::string   strNumber = std::to_string(n);
     unsigned long d         = size - strNumber.size();
     for (size_t i = 0; i < d; i++) { str.push_back('0'); }

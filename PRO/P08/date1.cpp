@@ -20,9 +20,7 @@ bool operator<(const Date a, const Date b) {
     if (a.get_year() == b.get_year()) {
         if (a.get_month() < b.get_month()) return true;
 
-        if (a.get_month() == b.get_month()) {
-            return a.get_day() < b.get_day();
-        }
+        if (a.get_month() == b.get_month()) { return a.get_day() < b.get_day(); }
     };
 
     return false;

@@ -7,7 +7,8 @@ class Cone : public Solid3D {
     double height_;
 
   public:
-    Cone(const point &c, double radius, double height) : Solid3D(c), radius_(radius), height_(height) {}
+    Cone(const point &c, double radius, double height)
+        : Solid3D(c), radius_(radius), height_(height) {}
 
     double radius() const { return radius_; }
 
