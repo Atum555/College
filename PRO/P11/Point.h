@@ -18,7 +18,7 @@ class Point {
     int x_, y_;
 };
 
-Point operator*(int x, const Point &p); // "left" multiplication by scalar
+Point         operator*(int x, const Point &p); // "left" multiplication by scalar
 std::ostream &operator<<(std::ostream &os, const Point &p);
 
 #endif

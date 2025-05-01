@@ -15,8 +15,7 @@ void sum(const smatrix &a, const smatrix &b, smatrix &r) {
         } else if (a[ia].row == b[ib].row) {
             if (a[ia].col == b[ib].col) {
                 if (a[ia].value + b[ib].value)
-                    r.push_back(sm_entry{ a[ia].row, a[ia].col,
-                                          a[ia].value + b[ib].value });
+                    r.push_back(sm_entry{ a[ia].row, a[ia].col, a[ia].value + b[ib].value });
                 ++ia;
                 ++ib;
             } else if (a[ia].col < b[ib].col) {

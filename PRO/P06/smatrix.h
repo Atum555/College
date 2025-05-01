@@ -18,9 +18,7 @@ void sum(const smatrix &a, const smatrix &b, smatrix &r);
 
 void print(const smatrix &sm) {
     cout << "[ ";
-    for (sm_entry e : sm) {
-        cout << '(' << e.row << ", " << e.col << ", " << e.value << ") ";
-    }
+    for (sm_entry e : sm) { cout << '(' << e.row << ", " << e.col << ", " << e.value << ") "; }
     cout << "]\n";
 }
 

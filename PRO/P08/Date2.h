@@ -29,8 +29,8 @@ class Date {
 };
 
 void Date::write() const {
-    std::cout << std::setfill('0') << std::setw(4) << year << '/'
-              << std::setw(2) << month << '/' << std::setw(2) << day;
+    std::cout << std::setfill('0') << std::setw(4) << year << '/' << std::setw(2) << month << '/'
+              << std::setw(2) << day;
 }
 
 #endif

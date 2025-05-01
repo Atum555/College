@@ -5,9 +5,7 @@
 
 class ErasmusStudent : public Student {
   public:
-    ErasmusStudent(
-        int id, const string &name, const string &course, const string &country
-    )
+    ErasmusStudent(int id, const string &name, const string &course, const string &country)
         : Student(id, name, course), country_(country) {}
 
     const string &country() const { return country_; }

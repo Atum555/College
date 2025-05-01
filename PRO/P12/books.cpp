@@ -26,7 +26,7 @@ void Book::build_index(const set<string> &words) {
                 if (index_.find(word) == index_.end()) index_[word] = {};
                 index_[word].insert(i + 1);
 
-                //this->show_index();
+                // this->show_index();
                 break;
             }
             // cout << endl;

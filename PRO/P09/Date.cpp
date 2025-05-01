@@ -2,8 +2,7 @@
 
 Date::Date() : Date(1, 1, 1) {}
 
-Date::Date(int year, int month, int day)
-    : year_(year), month_(month), day_(day) {}
+Date::Date(int year, int month, int day) : year_(year), month_(month), day_(day) {}
 
 bool Date::is_before(const Date &date) const {
     if (year_ < date.year_) return true;

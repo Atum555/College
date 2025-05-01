@@ -10,8 +10,8 @@ struct point {
 };
 
 std::ostream &operator<<(std::ostream &os, const point &p) {
-    return os << std::fixed << std::setprecision(3) << '(' << p.x << ',' << p.y
-              << ',' << p.z << ')';
+    return os << std::fixed << std::setprecision(3) << '(' << p.x << ',' << p.y << ',' << p.z
+              << ')';
 }
 
 class Solid {

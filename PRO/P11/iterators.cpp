@@ -1,9 +1,10 @@
-#include <sstream>
-#include <vector>
 #include <list>
+#include <sstream>
 #include <string>
+#include <vector>
 
-template <typename Itr> std::string to_string(Itr start, Itr end) {
+template <typename Itr>
+std::string to_string(Itr start, Itr end) {
     std::ostringstream out;
     out << "[ ";
     for (; start != end; ++start) out << *start << ' ';

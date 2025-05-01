@@ -21,14 +21,11 @@ game *createGame(const char *names[]) {
         for (int j = 0; j < i + 1; j++) pieces.push_back(domino{ j, i });
 
     // Shuffle Pieces
-    std::shuffle(
-        std::begin(pieces), std::end(pieces), std::default_random_engine(time(NULL))
-    );
+    std::shuffle(std::begin(pieces), std::end(pieces), std::default_random_engine(time(NULL)));
 
     // Assign pieces
     for (int i = 0; i < 4; ++i)
-        for (int j = 0; j < 7; ++j)
-            g->players[i].hand.push_back(pieces[i * 7 + j]);
+        for (int j = 0; j < 7; ++j) g->players[i].hand.push_back(pieces[i * 7 + j]);
 
     g->round = 0;
     g->pTurn = -1;
@@ -78,8 +75,7 @@ int main() {
 
         // Print Round Number
         std::cout << "                     "
-                  << "/////  Jogada " << g->round << "  \\\\\\\\\\"
-                  << std::endl;
+                  << "/////  Jogada " << g->round << "  \\\\\\\\\\" << std::endl;
         // Print Players Hands
         g->print();
 
@@ -113,8 +109,7 @@ int main() {
 
                 domino d = p->hand[j];
 
-                if (d.n1 == first or d.n1 == last or d.n2 == first
-                    or d.n2 == last) {
+                if (d.n1 == first or d.n1 == last or d.n2 == first or d.n2 == last) {
                     g->pTurn = (g->pTurn + i) % 4;
                     played   = true;
                     playPiece(g, p, d);

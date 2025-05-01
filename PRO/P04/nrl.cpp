@@ -13,27 +13,28 @@ int nrl(const char s[], char low[]) {
     int unique = 0;
     int found  = 0;
     int i      = 0;
-    while (char l = s[i]) {                                 // Select letter
+    while (char l = s[i]) {                    // Select letter
         int lInt = 0;
-        if ('a' <= l && l <= 'z') lInt = 1 << (l - 'a');    // Binary number 1 right shifted by letter number
+        if ('a' <= l && l <= 'z')
+            lInt = 1 << (l - 'a');             // Binary number 1 right shifted by letter number
         if ('A' <= l && l <= 'Z') lInt = 1 << (l - 'A');
         if (lInt) {
-            unique |= lInt;                     // Add letter to unique
-            if (found & lInt) unique &= ~lInt;  // Remove letter from unique if in found
-            found |= lInt;                      // Add letter to found
+            unique |= lInt;                    // Add letter to unique
+            if (found & lInt) unique &= ~lInt; // Remove letter from unique if in found
+            found |= lInt;                     // Add letter to found
         }
         ++i;
     }
 
     int c = 0;
     for (int i = 0; i < 26; ++i) {
-        if (unique & 1) {               // For each bit, if 1
-            low[c] = 'a' + i;           // Add corresponding letter to result str
-            ++c;                        // Increment letter counter
+        if (unique & 1) {     // For each bit, if 1
+            low[c] = 'a' + i; // Add corresponding letter to result str
+            ++c;              // Increment letter counter
         }
-        unique >>= 1;                   // Shift letter representation
+        unique >>= 1;         // Shift letter representation
     }
 
-    low[c] = 0;                         // Add Null caracter
+    low[c] = 0;               // Add Null caracter
     return c;
 }

@@ -13,9 +13,7 @@ class Cylinder : public Solid {
 
     double height() const { return height_; }
 
-    double area() const final {
-        return 2 * M_PI * radius_ * (radius_ + height_);
-    }
+    double area() const final { return 2 * M_PI * radius_ * (radius_ + height_); }
 
 
   private:

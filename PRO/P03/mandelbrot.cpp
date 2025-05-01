@@ -1,9 +1,7 @@
 #include "complex.h"
 #include <math.h>
 
-complex operator+(complex a, complex b) {
-    return complex{ a.x + b.x, a.y + b.y };
-}
+complex operator+(complex a, complex b) { return complex{ a.x + b.x, a.y + b.y }; }
 
 complex operator*(complex a, complex b) {
     return complex{ a.x * b.x - a.y * b.y, a.x * b.y + a.y * b.x };

@@ -13,6 +13,6 @@ bool pangram(const string &s, string &m) {
 
     for (char c = 'a'; c <= 'z'; c++)
         if (seen.find(c) == seen.end()) m.push_back(c);
-        
+
     return false;
 }

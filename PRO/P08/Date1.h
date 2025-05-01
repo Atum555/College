@@ -26,14 +26,13 @@ class Date {
 };
 
 void Date::write() const {
-    std::cout << std::setfill('0') << std::setw(4) << year << '/'
-              << std::setw(2) << month << '/' << std::setw(2) << day;
+    std::cout << std::setfill('0') << std::setw(4) << year << '/' << std::setw(2) << month << '/'
+              << std::setw(2) << day;
 }
 
 int Date::num_days(int year, int month) {
     int n_days[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-    if (month == 2 && year % 4 == 0 && (year % 100 != 0 || year % 400 == 0))
-        return 29;
+    if (month == 2 && year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) return 29;
     return n_days[month - 1];
 }
 

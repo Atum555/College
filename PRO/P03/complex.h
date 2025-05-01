@@ -16,8 +16,7 @@ void   mul(const complex &a, const complex &b, complex &r);
 using namespace std;
 
 ostream &operator<<(ostream &out, const complex &c) {
-    return out << fixed << setprecision(3) << c.x << (c.y >= 0.0 ? "+" : "")
-               << c.y << "i";
+    return out << fixed << setprecision(3) << c.x << (c.y >= 0.0 ? "+" : "") << c.y << "i";
 }
 
 #endif // __complex_h__

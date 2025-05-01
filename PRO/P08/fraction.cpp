@@ -20,17 +20,11 @@ class Fraction {
         return Fraction(num * f.den + f.num, den * f.den);
     }
 
-    Fraction sub(const Fraction &f) const {
-        return sum(Fraction(-f.num, f.den));
-    }
+    Fraction sub(const Fraction &f) const { return sum(Fraction(-f.num, f.den)); }
 
-    Fraction mul(const Fraction &f) const {
-        return Fraction(num * f.num, den * f.den);
-    }
+    Fraction mul(const Fraction &f) const { return Fraction(num * f.num, den * f.den); }
 
-    Fraction div(const Fraction &f) const {
-        return mul(Fraction(f.den, f.num));
-    }
+    Fraction div(const Fraction &f) const { return mul(Fraction(f.den, f.num)); }
 
   private:
     void normalise() {

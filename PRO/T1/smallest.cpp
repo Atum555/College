@@ -1,8 +1,6 @@
 #include "interval.h"
 
-int duration(const interval a) {
-    return a.end.h * 60 + a.end.m - a.start.h * 60 - a.start.m;
-}
+int duration(const interval a) { return a.end.h * 60 + a.end.m - a.start.h * 60 - a.start.m; }
 
 interval smallest(const interval a[], int n) {
     interval smallest   = 0 [a];

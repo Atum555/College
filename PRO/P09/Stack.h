@@ -5,7 +5,8 @@
 #include <iostream>
 #include <vector>
 
-template <typename T> class Stack {
+template <typename T>
+class Stack {
   public:
     Stack();
     size_t size() const;

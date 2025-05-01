@@ -7,7 +7,5 @@ void Point2d::translate(const Point2d &t) {
 }
 
 double Point2d::distance_to(const Point2d &p) const {
-    return sqrt(
-        pow(this->get_x() - p.get_x(), 2) + pow(this->get_y() - p.get_y(), 2)
-    );
+    return sqrt(pow(this->get_x() - p.get_x(), 2) + pow(this->get_y() - p.get_y(), 2));
 }

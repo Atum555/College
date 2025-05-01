@@ -30,9 +30,7 @@ struct player {
         std::cout << "]" << std::endl;
     }
 
-    void printPoints() {
-        std::cout << name << " - " << points << "pts" << std::endl;
-    }
+    void printPoints() { std::cout << name << " - " << points << "pts" << std::endl; }
 };
 
 struct game {

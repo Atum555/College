@@ -14,16 +14,13 @@ bool operator<=(const time_of_day &a, const time_of_day &b) {
 
 interval intersection(interval a, interval b) {
     const interval zero = {
-        {0, 0},
-        {0, 0}
+        { 0, 0 },
+        { 0, 0 }
     };
     if (a.start <= b.start) {
-        if (b.start < a.end)
-            return interval{ b.start, a.end < b.end ? a.end : b.end };
+        if (b.start < a.end) return interval{ b.start, a.end < b.end ? a.end : b.end };
         return zero;
     }
-    if (a.start < b.end) {
-        return interval{ a.start, a.end < b.end ? a.end : b.end };
-    }
+    if (a.start < b.end) { return interval{ a.start, a.end < b.end ? a.end : b.end }; }
     return zero;
 }
