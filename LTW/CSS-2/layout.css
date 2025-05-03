@@ -1,0 +1,57 @@
+body {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas:
+        "header       header"
+        "nav          aside"
+        "main-content aside"
+        "footer       aside";
+    margin: 0 auto;
+    width: 60em;
+    background-color: #edeff0;
+}
+
+body > header {
+    grid-area: header;
+    position: relative;
+
+    #signup {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 1em;
+    }
+}
+
+#menu {
+    grid-area: nav;
+
+    ul {
+        display: flex;
+
+        li {
+            flex-grow: 1;
+        }
+    }
+}
+
+aside {
+    grid-area: aside;
+}
+
+#news {
+    grid-area: main-content;
+
+    footer {
+        display: flex;
+
+        .author {
+            flex-grow: 1;
+        }
+    }
+}
+
+body > footer {
+    grid-area: footer;
+    display: flex;
+}

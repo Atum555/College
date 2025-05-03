@@ -49,6 +49,7 @@ body > header {
 #menu ul {
     margin: 0;
     padding: 0;
+    background-color: white;
 
     li {
         border-top: 5px solid;
@@ -110,11 +111,12 @@ body > header {
 
     article {
         margin: 1em 0;
+        background-color: white;
 
         header {
             position: absolute;
             padding: 1em;
-            
+
             h1 {
                 margin: 0;
                 max-width: 9em;
@@ -163,7 +165,7 @@ body > header {
     }
 }
 
-footer {
+body > footer {
     padding: 1em;
     color: white;
     background-color: #2a2f33;
