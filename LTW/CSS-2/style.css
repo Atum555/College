@@ -109,7 +109,7 @@ body > header {
         width: 100%;
     }
 
-    article {
+    > article {
         margin: 1em 0;
         background-color: white;
 
@@ -130,7 +130,7 @@ body > header {
             }
         }
 
-        p {
+        > p {
             padding: 0 1em;
 
             &:first-of-type::first-letter {

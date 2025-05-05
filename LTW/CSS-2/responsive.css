@@ -115,4 +115,12 @@
     #news .tags {
         display: none;
     }
+
+    #comments {
+        form {
+            label {
+                grid-column-end: span 4;
+            }
+        }
+    }
 }

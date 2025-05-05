@@ -1,0 +1,74 @@
+#comments {
+    margin: 1em;
+
+    .comment {
+        .user {
+            font-style: italic;
+        }
+
+        .user::after {
+            content: " said:";
+            font-style: normal;
+        }
+
+        .date {
+            float: right;
+        }
+
+        p {
+            background-color: #edeff0;
+            padding: 1em;
+        }
+
+        p::before {
+            content: "\201C";
+            position: relative;
+            top: 20px;
+            font-size: 3em;
+            color: #ccc;
+        }
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 1em;
+        gap: 1em;
+        background-color: #edeff0;
+
+        h2 {
+            grid-column-end: span 4;
+            font-size: 1em;
+        }
+
+        label {
+            grid-column-end: span 2;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1em;
+            align-items: center;
+        }
+
+        label:last-of-type {
+            grid-column-end: span 4;
+        }
+
+        input {
+            height: 2em;
+        }
+
+        textarea {
+            height: 6em;
+        }
+
+        button {
+            grid-column: 4;
+            margin: 1em 0;
+            border: none;
+            padding: 0;
+            height: 3em;
+            color: white;
+            background-color: black;
+        }
+    }
+}
