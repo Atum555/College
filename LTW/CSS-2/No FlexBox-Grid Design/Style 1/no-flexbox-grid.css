@@ -1,0 +1,9 @@
+aside {
+    float: right;
+    width: 30%;
+}
+
+main {
+    width: 40em;
+    border-right: 20em solid #f9c74f;
+}
