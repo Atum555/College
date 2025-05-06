@@ -1,0 +1,29 @@
+body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        "header-content header-content"
+        "nav-content nav-content"
+        "main-content aside-content"
+        "footer-content footer-content";
+
+    > header {
+        grid-area: header-content;
+    }
+
+    > nav {
+        grid-area: nav-content;
+    }
+
+    > main {
+        grid-area: main-content;
+    }
+
+    > aside {
+        grid-area: aside-content;
+    }
+
+    > footer {
+        grid-area: footer-content;
+    }
+}

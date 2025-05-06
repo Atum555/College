@@ -1,0 +1,36 @@
+body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto 1fr auto 1fr;
+    grid-template-areas:
+        "header-content header-content"
+        "nav-content nav-content"
+        "main-content aside-content"
+        "main-content footer-content"
+        'main-content empty';
+
+    > header {
+        grid-area: header-content;
+    }
+
+    > nav {
+        grid-area: nav-content;
+    }
+
+    > main {
+        grid-area: main-content;
+        display: flex;
+        
+        > section {
+            flex-grow: 1;
+        }
+    }
+
+    > aside {
+        grid-area: aside-content;
+    }
+
+    > footer {
+        grid-area: footer-content;
+    }
+}

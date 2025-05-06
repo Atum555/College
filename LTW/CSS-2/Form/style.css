@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@400;700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+form {
+    --label-optional: #333;
+    --label-required: #dc2626;
+    --field-color: #ecfccb;
+    --field-focus: #d9f99d;
+    --field-border: #84cc16;
+    --error-color: #fecaca;
+    --error-border: #f87171;
+    --button-bgcolor: #84cc16;
+
+    width: 50em;
+    margin: 1em auto;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "first-name-area last-name-area user-name-area"
+        "email-area email-area password-area"
+        "address-area address-area address-area"
+        "country-area city-area zip-code-area"
+        "bio-area bio-area bio-area"
+        "empty empty submit-button-area";
+    font-family: "Martel Sans", sans-serif;
+
+    label {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.8em;
+        line-height: 1em;
+        font-weight: bold;
+
+        button,
+        input,
+        select,
+        textarea {
+            border: 1px solid var(--field-border);
+            border-radius: 4px;
+            padding: 1em;
+            background-color: var(--field-color);
+
+            &:focus {
+                outline: none;
+                border: 1px solid var(--field-border);
+                background-color: var(--field-focus);
+            }
+
+            &:invalid {
+                border: 1px solid var(--error-border);
+                background-color: var(--error-color);
+            }
+        }
+
+        textarea {
+            height: 10em;
+        }
+    }
+
+    label {
+        color: var(--label-optional);
+    }
+
+    label.required {
+        color: var(--label-required);
+    }
+
+    button {
+        border: none;
+        border-radius: 5px;
+        padding: 1.2em;
+        font-size: 0.9em;
+        color: white;
+        background-color: #84cc16;
+    }
+
+    button {
+        padding: 1em;
+        font-family: "Martel Sans", sans-serif;
+        font-weight: bold;
+        color: #fff;
+        background-color: var(--button-bgcolor);
+    }
+
+    #fname {
+        grid-area: first-name-area;
+    }
+
+    #lname {
+        grid-area: last-name-area;
+    }
+
+    #username {
+        grid-area: user-name-area;
+    }
+
+    #email {
+        grid-area: email-area;
+    }
+
+    #password {
+        grid-area: password-area;
+    }
+
+    #address {
+        grid-area: address-area;
+    }
+
+    #country {
+        grid-area: country-area;
+    }
+
+    #city {
+        grid-area: city-area;
+    }
+
+    #zipcode {
+        grid-area: zip-code-area;
+    }
+
+    #bio {
+        grid-area: bio-area;
+    }
+
+    #register {
+        grid-area: submit-button-area;
+    }
+}
