@@ -2,10 +2,10 @@ body {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
-        "header-content header-content"
-        "nav-content nav-content"
-        "main-content aside-content"
-        "footer-content footer-content";
+        "header-content aside-content"
+        "nav-content aside-content"
+        "footer-content footer-content"
+        "main-content main-content";
 
     > header {
         grid-area: header-content;
@@ -17,15 +17,6 @@ body {
 
     > main {
         grid-area: main-content;
-
-        > section {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-
-            > h2 {
-                grid-column-end: span 3;
-            }
-        }
     }
 
     > aside {

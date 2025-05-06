@@ -1,7 +1,6 @@
 body {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto auto 1fr auto;
     grid-template-areas:
         "header-content header-content"
         "nav-content nav-content"

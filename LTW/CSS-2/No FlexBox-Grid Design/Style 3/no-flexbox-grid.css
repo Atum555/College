@@ -1,0 +1,18 @@
+body {
+    position: relative;
+}
+
+aside {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 6em;
+}
+
+main {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    translate: 0 46em;
+}
