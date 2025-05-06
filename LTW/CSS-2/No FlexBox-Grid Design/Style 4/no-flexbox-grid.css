@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
+main {
+    width: 60%;
+
+    section {
+        float: left;
+        width: 50%;
+    }
+}
+
+aside {
+    position: absolute;
+    top: 8em;
+    right: 0;
+    width: 40%;
+    height: 8em;
+}
+
+footer {
+    position: absolute;
+    top: 16em;
+    right: 0;
+    width: 40%;
+}
