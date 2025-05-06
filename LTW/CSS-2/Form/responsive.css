@@ -1,0 +1,19 @@
+@media (max-width: 60em) {
+    form {
+        margin: 2em auto;
+        width: 80%;
+        grid-template-columns: auto;
+        grid-template-areas:
+            "first-name-area"
+            "last-name-area"
+            "user-name-area"
+            "email-area"
+            "password-area"
+            "address-area"
+            "country-area"
+            "city-area"
+            "zip-code-area"
+            "bio-area"
+            "submit-button-area";
+    }
+}
