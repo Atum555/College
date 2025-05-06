@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Form Example</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="responsive.css" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <form>
+            <label id="username" class="required">
+                Username
+                <input type="text" name="username" placeholder="johndoe" required />
+            </label>
+            <label id="password" class="required">
+                Password
+                <input type="password" name="password" required />
+            </label>
+            <label id="fname">
+                First Name
+                <input type="text" name="fname" placeholder="John" />
+            </label>
+            <label id="lname">
+                Last Name
+                <input type="email" name="lname" placeholder="Doe" />
+            </label>
+            <label id="email" class="required">
+                E-mail
+                <input type="email" name="email" placeholder="johndoe@mail.com" required />
+            </label>
+            <label id="address">
+                Address
+                <input type="text" name="address" placeholder="1st Street, 1" />
+            </label>
+            <label id="country"
+                >Country
+                <select>
+                    <option value="pt">Portugal</option>
+                    <option value="other">Other</option>
+                </select>
+            </label>
+            <label id="city">
+                City
+                <input type="text" name="city" placeholder="Porto" />
+            </label>
+            <label id="zipcode">
+                ZIP Code
+                <input type="text" name="zipcode" placeholder="4000-001" />
+            </label>
+            <label id="bio">
+                Bio
+                <textarea name="bio" placeholder="Just a regular guy..."></textarea>
+            </label>
+            <button id="register" type="submit">Register</button>
+        </form>
+    </body>
+</html>
