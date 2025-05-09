@@ -47,9 +47,15 @@ aside {
     grid-area: aside;
 }
 
-#news {
+main,
+#register,
+#login,
+#news,
+#edit-article {
     grid-area: main-content;
+}
 
+#news {
     footer {
         display: flex;
 
@@ -57,14 +63,6 @@ aside {
             flex-grow: 1;
         }
     }
-}
-
-#register {
-    grid-area: main-content;
-}
-
-#login {
-    grid-area: main-content;
 }
 
 body > footer {
