@@ -1,0 +1,72 @@
+body {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        "header       header"
+        "nav          aside"
+        "main-content aside"
+        "footer       footer";
+    margin: 0 auto;
+    width: 60em;
+    background-color: #edeff0;
+}
+
+body > header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+
+    h1 {
+        grid-area: 1 / 1;
+    }
+
+    h2 {
+        grid-area: 2 / 1;
+    }
+
+    #signup {
+        grid-area: 2 / 2;
+    }
+}
+
+#menu {
+    grid-area: nav;
+
+    ul {
+        display: flex;
+
+        li {
+            flex-grow: 1;
+        }
+    }
+}
+
+aside {
+    grid-area: aside;
+}
+
+#news {
+    grid-area: main-content;
+
+    footer {
+        display: flex;
+
+        .author {
+            flex-grow: 1;
+        }
+    }
+}
+
+#register {
+    grid-area: main-content;
+}
+
+#login {
+    grid-area: main-content;
+}
+
+body > footer {
+    grid-area: footer;
+}
