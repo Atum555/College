@@ -1,21 +1,10 @@
 <?php
-$db = new PDO('sqlite:news.db');
-$stmt = $db->prepare('  SELECT *, COUNT(comments.id) AS comments
-                        FROM news 
-                        JOIN users USING (username) 
-                        LEFT JOIN comments ON comments.news_id = news.id
-                        WHERE news.id = :id');
-$stmt->bindParam(':id', $_GET['id']);
-$stmt->execute();
-$article = $stmt->fetch(PDO::FETCH_ASSOC);
-
-$stmt = $db->prepare('  SELECT * 
-                        FROM comments 
-                        JOIN users USING (username) 
-                        WHERE comments.news_id = :id');
-$stmt->bindParam(':id', $_GET['id']);
-$stmt->execute();
-$comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
+include_once('database/connection.php');
+include_once('database/news.php');
+include_once('database/comments.php');
+$db = getDatabaseConnection();
+$article = getNewsArticle($db, $_GET['id']);
+$comments = getComments($db, $_GET['id']);
 ?>
 
 <!DOCTYPE html>
