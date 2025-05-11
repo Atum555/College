@@ -46,6 +46,23 @@ function output_article($article, $comments = null) { ?>
             </span>
             <span class="date"><?= date('F j', $article['published']) ?></span>
             <a class="comments" href="/article.php?id=<?= $article['id'] ?>#comments"><?= $article['comments'] ?></a>
+            <a class="edit-button" href="/edit_article.php?id=<?= $article['id'] ?>"> &#9998; </a>
         </footer>
     </article>
+<?php }
+
+function output_edit_article($article) { ?>
+    <form action="action_edit_article.php" method="post">
+        <input type="hidden" name="id" value="<?= htmlspecialchars($article['id']) ?>">
+        <label>Title
+            <input type="text" name="title" value="<?= htmlspecialchars($article['title']) ?>">
+        </label>
+        <label>Introduction
+            <textarea name="introduction" rows="10"><?= htmlspecialchars($article['introduction']) ?></textarea>
+        </label>
+        <label>Full Text
+            <textarea name="fulltext" rows="16"><?= htmlspecialchars($article['fulltext']) ?></textarea>
+        </label>
+        <button type="submit">Submit</button>
+    </form>
 <?php }

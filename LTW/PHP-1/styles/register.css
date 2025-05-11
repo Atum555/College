@@ -29,13 +29,5 @@
             outline: none;
             border-bottom: 1px solid #046dd5;
         }
-
-        button {
-            width: fit-content;
-            border: none;
-            padding: 0.7em 1em;
-            color: white;
-            background-color: black;
-        }
     }
 }

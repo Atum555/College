@@ -9,11 +9,30 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+/* Generic Paragraph */
 p {
     font-family: "Lora", serif;
     line-height: 1.4em;
 }
 
+/* Generic Form Label and Button */
+form {
+    > label {
+        display: grid;
+        gap: 0.5em;
+        align-items: center;
+    }
+
+    > button {
+        width: fit-content;
+        border: none;
+        padding: 0.7em 1em;
+        color: white;
+        background-color: black;
+    }
+}
+
+/* Site Header */
 body > header {
     padding: 1em;
     background-color: #046dd5;
@@ -46,6 +65,7 @@ body > header {
     }
 }
 
+/* Site Navigation */
 #menu ul {
     margin: 0;
     padding: 0;
@@ -90,6 +110,7 @@ body > header {
     }
 }
 
+/* Site aside */
 #related {
     padding: 1em;
     background-color: #2a2f33;
@@ -104,6 +125,7 @@ body > header {
     }
 }
 
+/* Site News */
 #news {
     img {
         width: 100%;
@@ -113,7 +135,7 @@ body > header {
         margin: 1em 0;
         background-color: white;
 
-        header {
+        > header {
             position: absolute;
             padding: 1em;
 
@@ -138,7 +160,7 @@ body > header {
             }
         }
 
-        footer {
+        > footer {
             padding: 1em;
             font-size: 0.8em;
             color: white;
@@ -155,16 +177,25 @@ body > header {
             }
 
             .date {
-                padding-inline: 1em;
+                margin-inline: 1em;
+            }
+
+            .comments {
+                margin-inline: 1em;
             }
 
             .comments::after {
                 content: " comments";
             }
+
+            .edit-button {
+                border: none;
+            }
         }
     }
 }
 
+/* Site Footer */
 body > footer {
     padding: 1em;
     color: white;
@@ -172,5 +203,21 @@ body > footer {
 
     p {
         margin: 0;
+    }
+}
+
+/* Edit Article Section */
+#edit-article {
+    margin: 1em 0;
+
+    > form {
+        padding: 2em;
+        display: grid;
+        gap: 1em;
+        background-color: white;
+
+        > button {
+            justify-self: end;
+        }
     }
 }
