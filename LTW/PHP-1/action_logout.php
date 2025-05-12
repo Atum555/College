@@ -1,0 +1,14 @@
+<?php
+session_start();
+include_once('database/connection.php');
+include_once('database/users.php');
+include_once('database/news.php');
+include_once('database/comments.php');
+include_once('templates/common.php');
+include_once('templates/news.php');
+
+session_unset();
+session_destroy();
+
+header("Location: /");
+exit();

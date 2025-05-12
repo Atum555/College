@@ -1,0 +1,142 @@
+@media (max-width: 60em) {
+    body {
+        width: 100%;
+        grid-template-columns: auto;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main-content"
+            "footer";
+    }
+
+    aside {
+        display: none;
+    }
+}
+
+@media (max-width: 30em) {
+    body > header {
+        h1 {
+            font-size: 1.5em;
+        }
+
+        h2 {
+            display: none;
+        }
+
+        #signup {
+            grid-area: 2 / 1;
+        }
+    }
+
+    #menu {
+        label.hamburger[for="hamburger"] {
+            display: block;
+            padding: 0.5em 1em;
+            background-color: #2a2f33;
+
+            &::after {
+                content: "\2630";
+                color: white;
+            }
+        }
+
+        ul {
+            flex-direction: column;
+
+            li {
+                height: 0;
+                padding: 0 1em;
+                opacity: 0;
+                background-color: #edeff0;
+                text-align: left;
+                transition: all 0.3s ease-in-out;
+            }
+
+            li:nth-child(1) {
+                border-top: none;
+                border-left: 5px solid #e1493e;
+            }
+
+            li:nth-child(2) {
+                border-top: none;
+                border-left: 5px solid #8aba56;
+            }
+
+            li:nth-child(3) {
+                border-top: none;
+                border-left: 5px solid #5b4282;
+            }
+
+            li:nth-child(4) {
+                border-top: none;
+                border-left: 5px solid #ff8932;
+            }
+
+            li:nth-child(5) {
+                border-top: none;
+                border-left: 5px solid #19b6e9;
+            }
+
+            li:nth-child(6) {
+                border-top: none;
+                border-left: 5px solid #e84c8b;
+            }
+        }
+
+        #hamburger:checked {
+            + label.hamburger[for="hamburger"]::after {
+                content: "\2715";
+            }
+
+            ~ ul li {
+                height: 1.5em;
+                padding: 0.5em 1em;
+                opacity: 1;
+            }
+        }
+    }
+
+    #news article {
+        margin: 0;
+
+        header {
+            position: static;
+            padding: 1em;
+
+            h1 {
+                max-width: 100%;
+                font-size: 1em;
+                color: black;
+
+                a {
+                    color: black;
+                    text-shadow: none;
+                }
+            }
+        }
+    }
+
+    #news .tags {
+        display: none;
+    }
+
+    #comments {
+        form {
+            label {
+                grid-column-end: span 4;
+            }
+        }
+    }
+
+    #login-register {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100%;
+        background-color: white;
+
+        form {
+            padding: 3em !important;
+        }
+    }
+}

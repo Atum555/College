@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+#hamburger,
+label.hamburger[for="hamburger"] {
+    display: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Generic Paragraph */
+p {
+    font-family: "Lora", serif;
+    line-height: 1.4em;
+}
+
+/* Generic Form Label and Button */
+form {
+    > label {
+        display: grid;
+        gap: 0.5em;
+        align-items: center;
+    }
+
+    > button {
+        width: fit-content;
+        border: none;
+        padding: 0.7em 1em;
+        color: white;
+        background-color: black;
+    }
+}
+
+/* Site Header */
+body > header {
+    padding: 1em;
+    background-color: #046dd5;
+
+    h1 {
+        margin: 0;
+    }
+
+    h2 {
+        margin: 0;
+        font-weight: normal;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    #signup {
+        margin-top: 1em;
+
+        a {
+            padding: 0 1em;
+        }
+
+        > a:first-child {
+            padding-left: 0;
+            border-right: 1px solid white;
+        }
+    }
+}
+
+/* Site Navigation */
+#menu ul {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+
+    li {
+        border-top: 5px solid;
+        padding: 1em 0;
+        text-align: center;
+        list-style-type: none;
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+    }
+
+    li:hover {
+        background-color: #2a2f33;
+        a {
+            color: white;
+        }
+    }
+
+    li:nth-child(1) {
+        border-top-color: #e1493e;
+    }
+    li:nth-child(2) {
+        border-top-color: #8aba56;
+    }
+    li:nth-child(3) {
+        border-top-color: #5b4282;
+    }
+    li:nth-child(4) {
+        border-top-color: #ff8932;
+    }
+    li:nth-child(5) {
+        border-top-color: #19b6e9;
+    }
+    li:nth-child(6) {
+        border-top-color: #e84c8b;
+    }
+}
+
+/* Site aside */
+#related {
+    padding: 1em;
+    background-color: #2a2f33;
+
+    p {
+        color: white;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+/* Site News */
+#news {
+    img {
+        width: 100%;
+    }
+
+    > article {
+        margin: 1em 0;
+        background-color: white;
+
+        > header {
+            position: absolute;
+            padding: 1em;
+
+            h1 {
+                margin: 0;
+                max-width: 9em;
+                font-size: 1.8em;
+                text-shadow: 0.2em 0.2em 0.2em black;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        > p {
+            padding: 0 1em;
+
+            &:first-of-type::first-letter {
+                font-size: 2em;
+            }
+        }
+
+        > footer {
+            padding: 1em;
+            font-size: 0.8em;
+            color: white;
+            background-color: #f4655f;
+
+            a {
+                text-decoration: none;
+                color: white;
+                border-bottom: 1px solid white;
+            }
+
+            .author::before {
+                content: "By ";
+            }
+
+            .date {
+                margin-inline: 1em;
+            }
+
+            .comments::after {
+                content: " comments";
+            }
+
+            .edit-button {
+                margin-left: 1em;
+                border: none;
+            }
+        }
+    }
+}
+
+/* Site Footer */
+body > footer {
+    padding: 1em;
+    color: white;
+    background-color: #2a2f33;
+
+    p {
+        margin: 0;
+    }
+}
+
+/* Edit Article Section */
+#edit-article {
+    margin: 1em 0;
+    height: fit-content;
+
+    > form {
+        padding: 2em;
+        display: grid;
+        gap: 1em;
+        background-color: white;
+
+        > button {
+            justify-self: end;
+        }
+    }
+}
+
+/* Register / Login Section */
+#login-register {
+    margin: 1em auto;
+    padding: 1em 2em;
+    background-color: white;
+    height: fit-content;
+
+    > h1 {
+        text-align: center;
+    }
+
+    > form {
+        display: grid;
+        gap: 1.5em;
+        padding: 2em;
+        background-color: white;
+
+        label {
+            display: grid;
+            gap: 0.5em;
+            align-items: center;
+        }
+
+        input {
+            height: 2em;
+            width: 20em;
+            border: none;
+            border-bottom: 1px solid black;
+        }
+
+        input:focus {
+            outline: none;
+            border-bottom: 1px solid #046dd5;
+        }
+
+        button {
+            width: fit-content;
+            border: none;
+            padding: 0.7em 1em;
+            color: white;
+            background-color: black;
+        }
+    }
+}

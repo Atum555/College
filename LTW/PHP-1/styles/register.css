@@ -1,0 +1,33 @@
+#register,
+#login {
+    margin: 5em auto 10em;
+
+    h1 {
+        text-align: center;
+    }
+
+    form {
+        display: grid;
+        gap: 1.5em;
+        padding: 2em;
+        background-color: white;
+
+        label {
+            display: grid;
+            gap: 0.5em;
+            align-items: center;
+        }
+
+        input {
+            height: 2em;
+            width: 20em;
+            border: none;
+            border-bottom: 1px solid black;
+        }
+
+        input:focus {
+            outline: none;
+            border-bottom: 1px solid #046dd5;
+        }
+    }
+}
