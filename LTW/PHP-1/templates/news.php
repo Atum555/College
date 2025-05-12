@@ -1,6 +1,6 @@
 <?php
 
-function output_article($article, $comments = null) { ?>
+function output_article(PDO $db, $article, $comments = null) { ?>
     <article>
         <header>
             <h1><a href="/article.php?id=<?= $article['id'] ?>"><?= $article['title'] ?></a></h1>
@@ -46,7 +46,9 @@ function output_article($article, $comments = null) { ?>
             </span>
             <span class="date"><?= date('F j', $article['published']) ?></span>
             <a class="comments" href="/article.php?id=<?= $article['id'] ?>#comments"><?= $article['comments'] ?></a>
-            <a class="edit-button" href="/edit_article.php?id=<?= $article['id'] ?>"> &#9998; </a>
+            <?php if (isUserLoggedIn($db)) { ?>
+                <a class="edit-button" href="/edit_article.php?id=<?= $article['id'] ?>"> &#9998; </a>
+            <?php } ?>
         </footer>
     </article>
 <?php }

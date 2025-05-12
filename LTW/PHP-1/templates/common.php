@@ -1,6 +1,6 @@
 <?php
-
 function output_head() { ?>
+
     <head>
         <title>Super Legit News</title>
         <meta charset="UTF-8" />
@@ -12,14 +12,20 @@ function output_head() { ?>
     </head>
 <?php }
 
-function output_header() { ?>
+function output_header(PDO $db) { ?>
     <header>
         <h1><a href="/">Super Legit News</a></h1>
         <h2><a href="/">Where fake news are born!</a></h2>
-        <div id="signup">
-            <a href="/">Register</a>
-            <a href="/">Login</a>
-        </div>
+        <?php if (isUserLoggedIn($db)) { ?>
+            <div id="logout">
+                <a href="/action_logout.php">Logout</a>
+            </div>
+        <?php } else { ?>
+            <div id="signup">
+                <a href="/register.php">Register</a>
+                <a href="/login.php">Login</a>
+            </div>
+        <?php } ?>
     </header>
 <?php }
 

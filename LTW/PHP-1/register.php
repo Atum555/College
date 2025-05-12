@@ -8,12 +8,6 @@ include_once('templates/common.php');
 include_once('templates/news.php');
 
 $db = getDatabaseConnection();
-$article = getNewsArticle($db, $_GET['id']);
-
-if (!isUserLoggedIn($db)) {
-    header('Location: /');
-    exit();
-}
 ?>
 
 <!DOCTYPE html>
@@ -25,8 +19,13 @@ if (!isUserLoggedIn($db)) {
     <?php output_header($db) ?>
     <?php output_nav() ?>
     <?php output_aside() ?>
-    <main id="edit-article">
-        <?php output_edit_article($article) ?>
+    <main id="login-register">
+        <h1>Register</h1>
+        <form>
+            <label>Username<input type="text" name="username" /></label>
+            <label>Password<input type="password" name="password" /></label>
+            <button formaction="/action_register.php" formmethod="post">Register</button>
+        </form>
     </main>
     <?php output_footer() ?>
 </body>

@@ -1,6 +1,6 @@
 <?php
 
 function getDatabaseConnection(): PDO {
-    $dbPath = __DIR__ . '/news.db';
+    $dbPath = __DIR__ . '/database.db';
     return new PDO("sqlite:{$dbPath}");
 }
