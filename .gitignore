@@ -1,4 +1,13 @@
+# Executables
+*
+!*/
+!*.*
+
+# IDE
 .vscode
+
+# Haskell files
+*.hi
 
 # C files
 *.[ao]
