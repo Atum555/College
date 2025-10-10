@@ -1,0 +1,15 @@
+intersperse :: t -> [t] -> [t]
+intersperse _ [] = []
+intersperse _ [x] = [x]
+intersperse x (y : ys) = y : x : intersperse x ys
+
+-- >>> intersperse 0 []
+-- >>> intersperse 0 [1]
+-- >>> intersperse 0 [1,2]
+-- >>> intersperse 0 [1,2,3]
+-- >>> intersperse 0 [1,2,3,4]
+-- []
+-- [1]
+-- [1,0,2]
+-- [1,0,2,0,3]
+-- [1,0,2,0,3,0,4]
