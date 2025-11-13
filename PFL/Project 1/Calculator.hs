@@ -7,8 +7,13 @@ import Parsing
 -- Data Types
 ----------------------------------------------------------------
 
+type Name = String
+
+type Env = [(Name, Integer)]
+
 data Expr
   = Num Integer
+  | Var Name
   | Add Expr Expr
   | Sub Expr Expr
   | Mul Expr Expr
@@ -16,17 +21,33 @@ data Expr
   | Mod Expr Expr
   deriving (Show)
 
+data Command = Assign Name Expr | Expr Expr
+  deriving (Show)
+
+----------------------------------------------------------------
+-- Function to Update Env
+----------------------------------------------------------------
+
+updateEnv :: Name -> Integer -> Env -> Env
+updateEnv name value [] = [(name, value)]
+updateEnv name value ((n, v) : rest)
+  | n == name = (name, value) : rest
+  | otherwise = (n, v) : updateEnv name value rest
+
 ----------------------------------------------------------------
 -- Evaluator Function
 ----------------------------------------------------------------
 
-eval :: Expr -> Integer
-eval (Num n) = n
-eval (Add e1 e2) = eval e1 + eval e2
-eval (Sub e1 e2) = eval e1 - eval e2
-eval (Mul e1 e2) = eval e1 * eval e2
-eval (Div e1 e2) = eval e1 `div` eval e2
-eval (Mod e1 e2) = eval e1 `mod` eval e2
+eval :: Expr -> Env -> Integer
+eval (Num n) _ = n
+eval (Var v) env = case lookup v env of
+  Just n -> n
+  Nothing -> error "undefined variable"
+eval (Add e1 e2) env = eval e1 env + eval e2 env
+eval (Sub e1 e2) env = eval e1 env - eval e2 env
+eval (Mul e1 e2) env = eval e1 env * eval e2 env
+eval (Div e1 e2) env = eval e1 env `div` eval e2 env
+eval (Mod e1 e2) env = eval e1 env `mod` eval e2 env
 
 ----------------------------------------------------------------
 -- Parsers
@@ -41,7 +62,9 @@ eval (Mod e1 e2) = eval e1 `mod` eval e2
 -- term ::= factor termCont
 -- termCont ::= '*' factor termCont | '/' factor termCont | '%' factor termCont | epsilon
 
--- factor ::= natural | '(' expr ')'
+-- factor ::= variable | natural | '(' expr ')'
+
+-- command ::= variable '=' expr | expr
 
 expr :: Parser Expr
 expr = do
@@ -84,18 +107,36 @@ termCont acc =
 factor :: Parser Expr
 factor =
   do
-    n <- natural
-    return (Num n)
+    v <- variable
+    return (Var v)
+    <|> do
+      n <- natural
+      return (Num n)
     <|> do
       char '('
       e <- expr
       char ')'
       return e
 
+command :: Parser Command
+command =
+  do
+    v <- variable
+    char '='
+    e <- expr
+    return (Assign v e)
+    <|> do
+      e <- expr
+      return (Expr e)
+
 natural :: Parser Integer
 natural = do
   xs <- many1 (satisfy isDigit)
   return (read xs)
+
+variable :: Parser String
+variable = do
+  many1 (satisfy isLetter)
 
 ----------------------------------------------------------------
 -- Main Loop
@@ -105,18 +146,20 @@ main :: IO ()
 main =
   do
     txt <- getContents
-    calculator (lines txt)
+    calculator (lines txt) []
 
 -- | read-eval-print loop
-calculator :: [String] -> IO ()
-calculator [] = return ()
-calculator (l : ls) = do
-  putStrLn (evaluate l)
-  calculator ls
+calculator :: [String] -> Env -> IO ()
+calculator [] _ = return ()
+calculator (l : ls) env = do
+  let (result, env') = execute l env
+  putStrLn result
+  calculator ls env'
 
--- | evaluate a single expression
-evaluate :: String -> String
-evaluate txt =
-  case parse expr txt of
-    [(tree, "")] -> show (eval tree)
-    _ -> "parse error; try again"
+-- | execute a single expression
+execute :: String -> Env -> (String, Env)
+execute txt env =
+  case parse command txt of
+    [(Assign var tree, "")] -> let result = eval tree env in (show result, updateEnv var result env)
+    [(Expr tree, "")] -> (show (eval tree env), env)
+    _ -> ("parse error; try again", env)
